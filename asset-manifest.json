@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/Movie-Point/static/css/main.15f37fad.css",
+    "main.js": "/Movie-Point/static/js/main.15f69cc1.js",
+    "static/js/787.513f2d8f.chunk.js": "/Movie-Point/static/js/787.513f2d8f.chunk.js",
+    "static/media/poster2.jpg": "/Movie-Point/static/media/poster2.bf23bfae49d854fec0f2.jpg",
+    "static/media/poster1.jpg": "/Movie-Point/static/media/poster1.d966e333249e4f74e821.jpg",
+    "static/media/poster3.jpg": "/Movie-Point/static/media/poster3.7ee7b802517e3b685aaf.jpg",
+    "static/media/poster5.jpg": "/Movie-Point/static/media/poster5.d0a9cf21d7e7d56979e2.jpg",
+    "static/media/poster8.jpg": "/Movie-Point/static/media/poster8.61013e431fa5ca643217.jpg",
+    "static/media/poster9.jpg": "/Movie-Point/static/media/poster9.080f33854a8c02368de2.jpg",
+    "static/media/poster6.jpg": "/Movie-Point/static/media/poster6.57e30e483bb184bc63b9.jpg",
+    "static/media/poster4.jpg": "/Movie-Point/static/media/poster4.a2f1de9b0f0c656226d7.jpg",
+    "static/media/poster7.jpg": "/Movie-Point/static/media/poster7.8f23c2d5749c68467aaf.jpg",
+    "index.html": "/Movie-Point/index.html",
+    "main.15f37fad.css.map": "/Movie-Point/static/css/main.15f37fad.css.map",
+    "main.15f69cc1.js.map": "/Movie-Point/static/js/main.15f69cc1.js.map",
+    "787.513f2d8f.chunk.js.map": "/Movie-Point/static/js/787.513f2d8f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.15f37fad.css",
+    "static/js/main.15f69cc1.js"
+  ]
+}
