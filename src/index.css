@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200&display=swap');
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -11,3 +13,61 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.main-container {
+  background-color: black;
+  color: white;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+.header {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+}
+.header-grp {
+  display: flex;
+}
+ .icon-container {
+   height: 15px;
+   width: 20px;
+   margin: 25px 10px;
+ }
+ .header .icon-container img {
+  max-width: 100%;
+  height: auto;
+}
+.movie-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 1px 5px;
+  height: 1000px;
+	overflow-y: auto;
+}
+
+.movie-card {
+  margin: 10px 0px;
+}
+.poster-container {
+padding: 5px;
+}
+
+.poster-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+.movie-name {
+  font-size: 14px;
+  margin: -3px 0px 0px 10px;
+}
+
+.no-results {
+  position: absolute;
+  top: 44%;
+  left: 24%;
+  font-size: 25px
+}
+
+
