@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Movie-Point/static/css/main.812e3586.css",
-    "main.js": "/Movie-Point/static/js/main.18505010.js",
+    "main.css": "/Movie-Point/static/css/main.fd9a3d6f.css",
+    "main.js": "/Movie-Point/static/js/main.305652ba.js",
     "static/js/787.513f2d8f.chunk.js": "/Movie-Point/static/js/787.513f2d8f.chunk.js",
     "static/media/poster2.jpg": "/Movie-Point/static/media/poster2.bf23bfae49d854fec0f2.jpg",
     "static/media/poster1.jpg": "/Movie-Point/static/media/poster1.d966e333249e4f74e821.jpg",
@@ -13,12 +13,12 @@
     "static/media/poster4.jpg": "/Movie-Point/static/media/poster4.a2f1de9b0f0c656226d7.jpg",
     "static/media/poster7.jpg": "/Movie-Point/static/media/poster7.8f23c2d5749c68467aaf.jpg",
     "index.html": "/Movie-Point/index.html",
-    "main.812e3586.css.map": "/Movie-Point/static/css/main.812e3586.css.map",
-    "main.18505010.js.map": "/Movie-Point/static/js/main.18505010.js.map",
+    "main.fd9a3d6f.css.map": "/Movie-Point/static/css/main.fd9a3d6f.css.map",
+    "main.305652ba.js.map": "/Movie-Point/static/js/main.305652ba.js.map",
     "787.513f2d8f.chunk.js.map": "/Movie-Point/static/js/787.513f2d8f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.812e3586.css",
-    "static/js/main.18505010.js"
+    "static/css/main.fd9a3d6f.css",
+    "static/js/main.305652ba.js"
   ]
 }
