@@ -1,4 +1,4 @@
-const moviesList = [{
+const moviesList = [{ //mockData
     "page": {
         "title": "Romantic Comedy",
         "total-content-items": "54",
@@ -255,225 +255,10 @@ const moviesList = [{
 }
 ]
 
-const moviesArray = [
-    {
-        "name": "The Birds",
-        "poster-image": "poster1.jpg"
-    },
-    {
-        "name": "Rear Window",
-        "poster-image": "poster2.jpg"
-    },
-    {
-        "name": "Family Pot",
-        "poster-image": "poster3.jpg"
-    },
-    {
-        "name": "Family Pot",
-        "poster-image": "poster2.jpg"
-    },
-    {
-        "name": "Rear Window",
-        "poster-image": "poster1.jpg"
-    },
-    {
-        "name": "The Birds",
-        "poster-image": "poster3.jpg"
-    },
-    {
-        "name": "Rear Window",
-        "poster-image": "poster3.jpg"
-    },
-    {
-        "name": "The Birds",
-        "poster-image": "poster2.jpg"
-    },
-    {
-        "name": "Family Pot",
-        "poster-image": "poster1.jpg"
-    },
-    {
-        "name": "The Birds",
-        "poster-image": "poster1.jpg"
-    },
-    {
-        "name": "The Birds",
-        "poster-image": "poster1.jpg"
-    },
-    {
-        "name": "Rear Window",
-        "poster-image": "poster2.jpg"
-    },
-    {
-        "name": "Family Pot",
-        "poster-image": "poster3.jpg"
-    },
-    {
-        "name": "Family Pot",
-        "poster-image": "poster2.jpg"
-    },
-    {
-        "name": "Rear Window",
-        "poster-image": "poster1.jpg"
-    },
-    {
-        "name": "The Birds",
-        "poster-image": "poster3.jpg"
-    },
-    {
-        "name": "Rear Window",
-        "poster-image": "poster3.jpg"
-    },
-    {
-        "name": "The Birds",
-        "poster-image": "poster2.jpg"
-    },
-    {
-        "name": "Family Pot",
-        "poster-image": "poster1.jpg"
-    },
-    {
-        "name": "The Birds",
-        "poster-image": "poster1.jpg"
-    },
-    {
-        "name": "Rear Window",
-        "poster-image": "poster5.jpg"
-    },
-    {
-        "name": "Family Pot",
-        "poster-image": "poster6.jpg"
-    },
-    {
-        "name": "Family Pot",
-        "poster-image": "poster5.jpg"
-    },
-    {
-        "name": "Rear Window",
-        "poster-image": "poster4.jpg"
-    },
-    {
-        "name": "The Birds",
-        "poster-image": "poster6.jpg"
-    },
-    {
-        "name": "Rear Window",
-        "poster-image": "poster6.jpg"
-    },
-    {
-        "name": "The Birds",
-        "poster-image": "poster5.jpg"
-    },
-    {
-        "name": "Family Pot",
-        "poster-image": "poster4.jpg"
-    },
-    {
-        "name": "The Birds",
-        "poster-image": "poster4.jpg"
-    },
-    {
-        "name": "Rear Window",
-        "poster-image": "poster5.jpg"
-    },
-    {
-        "name": "Rear Window",
-        "poster-image": "poster5.jpg"
-    },
-    {
-        "name": "Family Pot",
-        "poster-image": "poster6.jpg"
-    },
-    {
-        "name": "Family Pot",
-        "poster-image": "poster5.jpg"
-    },
-    {
-        "name": "Rear Window",
-        "poster-image": "poster4.jpg"
-    },
-    {
-        "name": "The Birds",
-        "poster-image": "poster6.jpg"
-    },
-    {
-        "name": "Rear Window",
-        "poster-image": "poster6.jpg"
-    },
-    {
-        "name": "The Birds",
-        "poster-image": "poster5.jpg"
-    },
-    {
-        "name": "Family Pot",
-        "poster-image": "poster4.jpg"
-    },
-    {
-        "name": "The Birds",
-        "poster-image": "poster4.jpg"
-    },
-    {
-        "name": "Rear Window",
-        "poster-image": "poster5.jpg"
-    },
-    {
-        "name": "Family Pot",
-        "poster-image": "poster9.jpg"
-    },
-    {
-        "name": "Family Pot",
-        "poster-image": "poster8.jpg"
-    },
-    {
-        "name": "Rear Window",
-        "poster-image": "poster7.jpg"
-    },
-    {
-        "name": "The Birds",
-        "poster-image": "poster9.jpg"
-    },
-    {
-        "name": "Rear Window",
-        "poster-image": "poster9.jpg"
-    },
-    {
-        "name": "The Birds",
-        "poster-image": "poster8.jpg"
-    },
-    {
-        "name": "Family Pot",
-        "poster-image": "poster7.jpg"
-    },
-    {
-        "name": "Family Pot",
-        "poster-image": "poster9.jpg"
-    },
-    {
-        "name": "Family Pot",
-        "poster-image": "poster8.jpg"
-    },
-    {
-        "name": "Rear Window",
-        "poster-image": "poster7.jpg"
-    },
-    {
-        "name": "The Birds with an Extra Long Title",
-        "poster-image": "poster9.jpg"
-    },
-    {
-        "name": "Rear Window",
-        "poster-image": "poster9.jpg"
-    },
-    {
-        "name": "The Birds",
-        "poster-image": "poster8.jpg"
-    },
-    {
-        "name": "Family Pot",
-        "poster-image": "posterthatismissing.jpg"
-    }
-
-]
+let moviesArray = [];
+moviesList.forEach((item) => {
+    moviesArray = moviesArray.concat(item.page["content-items"].content);
+})
 
 export const getMovies = (pageNumber) => {
     let selectedPageContents = moviesList.filter((item) => {
@@ -491,10 +276,9 @@ export const getMovies = (pageNumber) => {
 }
 
 export const getSearchResults = (searchWord) => {
-if(searchWord === "") return moviesArray;
- const results = moviesArray.filter((movie)=> {
-  return movie.name.toLowerCase().includes(searchWord.toLowerCase());
- })
- return results;
+    if (searchWord === "") return moviesArray;
+    const results = moviesArray.filter((movie) => {
+        return movie.name.toLowerCase().includes(searchWord.toLowerCase());
+    })
+    return results;
 }
-

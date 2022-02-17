@@ -10,13 +10,13 @@ const MoviesList = () => {
     const [movies, setMovies] = useState([]);
     const [pageNo, setPageNo] = useState(1);
     const [searchTerm, setSearchTerm] = useState("");
-    const dispatch = useDispatch()
-    const movieList = useSelector(state => state.movies)
+    const dispatch = useDispatch();
+    const movieList = useSelector(state => state.movies);
+
     useEffect(() => {
         loadMovies();
-        console.log("Movies List", movieList)
     }, [])
- 
+
     useEffect(() => {
         if (movieList?.length > 0) {
             setMovies(movieList);
@@ -27,7 +27,6 @@ const MoviesList = () => {
     }, [movieList])
 
     const searchHandler = () => {
-        //setSearchTerm(e.target.value);
         dispatch(getSearchedMoviesFromStore(searchTerm));
     }
 
@@ -35,11 +34,6 @@ const MoviesList = () => {
         setSearchTerm(e.target.value);
         dispatch(getSearchedMoviesFromStore(e.target.value));
     }
-
-    //let imageComponent;
-    // function setImage (movie) {
-    //      imageComponent = React.lazy(() => import(`../posters/${movie["poster-image"]}`)); //For 
-    // }  //for dynamic import handler in case of missing poster
 
     function loadMovies() {
         getMovies(pageNo)
@@ -55,7 +49,6 @@ const MoviesList = () => {
             .catch(error => {
                 console.log('End of Page', error);
             })
-
     }
 
     const scrollEvent = (e) => {
@@ -67,6 +60,11 @@ const MoviesList = () => {
         }
     }
 
+    //let imageComponent;
+    // function setImage (movie) {
+    //      imageComponent = React.lazy(() => import(`../posters/${movie["poster-image"]}`)); //For 
+    // }  //for dynamic import handler in case of missing poster
+
     return (
         <div className="main-container" >
             <div>
@@ -75,7 +73,7 @@ const MoviesList = () => {
                         <div className="icon-container">
                             <img src={backArrow} alt="back-arrow" />
                         </div>
-                        <div style={{ "marginTop": "3px" }}>
+                        <div style={{ marginTop: "3px", fontWeight: "600" }}>
                             <h3>Romantic Comedy</h3>
                         </div>
                     </div>
@@ -99,9 +97,7 @@ const MoviesList = () => {
                     return (
                         <div key={index} className="movie-card">
                             <div className="poster-container">
-                                {/* <Suspense>
-                                <img src={imageComponent} alt="No Image" />
-                                </Suspense> */}
+                                {/* <Suspense><img src={imageComponent} alt="No Image" /></Suspense> */}
                                 <img src={require(`../posters/${movie["poster-image"]}`)} alt="Poster Down" />
                             </div>
                             <p className="movie-name">{movie.name}</p>
@@ -109,7 +105,6 @@ const MoviesList = () => {
                     )
                 })}
             </div>
-
         </div>
     )
 }
